@@ -40,3 +40,13 @@ function checkFirstRun()
 		window.localStorage.setItem("WoSApp",AppSettings);
 	}
 }
+
+function startSequence()
+{
+    alert("sending sms");
+        var intent = 'INTENT';
+        var success = function () { alert('Message sent successfully'); };
+        var error = function (e) { alert('Message Failed:' + e); };
+        sms.send("919980792858", "test message", intent, success, error);
+    alert("sms sent");
+}
